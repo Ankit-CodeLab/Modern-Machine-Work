@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Machine Work - Precision CNC Machining Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Base Colors - Edit these to change the entire theme */
+            --color-primary: #1E90FF;
+            /* Primary brand color - Royal Blue */
+            --color-secondary: #FFD700;
+            /* Secondary brand color - Gold */
+            --color-accent: #FF8C42;
+            /* Accent color for CTAs - Orange */
+            --color-background: #FAFAFA;
+            /* Main background color */
+            --color-white: #FFFFFF;
+            /* Pure white */
+            --color-black: #222222;
+            /* Not pure black, easier on eyes */
+
+            /* Text Colors */
+            --text-primary: var(--color-black);
+            /* Main text color */
+            --text-secondary: #555555;
+            /* Secondary text */
+            --text-light: var(--color-white);
+            /* Text on dark backgrounds */
+            --text-highlight: var(--color-primary);
+            /* Highlighted text */
+            --text-accent: var(--color-accent);
+            /* Accent text */
+
+            /* Background Colors */
+            --bg-primary: var(--color-background);
+            /* Main background */
+            --bg-secondary: #F5F5F5;
+            /* Secondary background */
+            --bg-card: var(--color-white);
+            /* Card background */
+            --bg-accent: var(--color-primary);
+            /* Accent backgrounds */
+
+            /* Button Colors */
+            --btn-primary-bg: var(--color-accent);
+            /* Primary button background */
+            --btn-primary-text: var(--color-white);
+            /* Primary button text */
+            --btn-secondary-bg: var(--color-primary);
+            /* Secondary button background */
+            --btn-secondary-text: var(--color-white);
+            /* Secondary button text */
+
+            /* Border Colors */
+            --border-light: #E0E0E0;
+            /* Light borders */
+            --border-medium: #CCCCCC;
+            /* Medium borders */
+            --border-accent: var(--color-primary);
+            /* Accent borders */
+
+            /* Shadow Colors */
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            /* Light shadows */
+            --shadow-medium: rgba(0, 0, 0, 0.15);
+            /* Medium shadows */
+            --shadow-accent: rgba(30, 144, 255, 0.2);
+            /* Accent shadows */
+
+            /* Overlay Colors */
+            --overlay-light: rgba(255, 255, 255, 0.9);
+            /* Light overlay */
+            --overlay-dark: rgba(0, 0, 0, 0.7);
+            /* Dark overlay */
+            --overlay-gradient: rgba(30, 144, 255, 0.1);
+            /* Gradient overlay */
+
+            /* Status Colors */
+            --color-success: #32CD32;
+            /* Success green */
+            --color-warning: #FFA500;
+            /* Warning orange */
+            --color-error: #FF4444;
+            /* Error red */
+            --color-info: var(--color-primary);
+            /* Info blue */
+
+            /* Gradient Colors */
+            --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-background) 100%);
+            --gradient-overlay: linear-gradient(135deg, var(--overlay-light) 0%, var(--overlay-gradient) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+
+        section {
+            padding: 30px 0;
+        }
+
+        section h2 {
+            margin-bottom: 2rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-primary);
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-full {
+            display: inline;
+        }
+
+        .logo-short {
+            display: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--color-primary);
+            transition: all 0.3s;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after,
+        nav a.active::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-primary);
+            position: relative;
+            color: var(--text-primary);
+            padding: 120px 2rem 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('Assets/Background 1.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+            color: var(--primary-blue);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: var(--text-dark);
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .hero-image {
+            position: relative;
+            animation: fadeInUp 1s ease 0.4s backwards;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide.prev {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(201, 164, 76, 0.4);
+            border: 3px solid var(--accent-gold);
+        }
+
+        .slide-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 10;
+        }
+
+        .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--secondary-silver);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .dot:hover {
+            transform: scale(1.2);
+        }
+
+        .dot.active {
+            background: var(--accent-gold);
+            transform: scale(1.3);
+        }
+
+        @keyframes fadeSlide {
+            from {
+                opacity: 0.4;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Scroll Animation Classes */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            will-change: opacity, transform;
+        }
+
+        .scroll-animate.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scroll-animate-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .scroll-animate-left.animate-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scroll-animate-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .scroll-animate-right.animate-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scroll-animate-scale {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .scroll-animate-scale.animate-in {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .cta-button {
+            background: var(--btn-primary-bg);
+            color: var(--btn-primary-text);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            background: var(--color-accent);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px var(--shadow-accent);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 2rem;
+            background: linear-gradient(135deg, var(--gradient-light) 0%, var(--gradient-dark) 100%);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-highlight);
+        }
+
+        .service-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            align-items: center;
+        }
+
+        .service-item:nth-child(even) {
+            direction: rtl;
+        }
+
+        .service-item:nth-child(even) .service-content {
+            direction: ltr;
+        }
+
+        .service-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(201, 164, 76, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .service-image:hover {
+            transform: scale(1.05);
+        }
+
+        .service-image {
+            max-height: 300px;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-content h3 {
+            color: var(--accent-gold);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-content p {
+            color: var(--secondary-silver);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Infrastructure Section */
+        .infrastructure {
+            padding: 80px 2rem;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .infrastructure::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('Assets/Background 2.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.2;
+            z-index: -1;
+            transform: translateZ(0);
+        }
+
+        .infrastructure::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(225deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%);
+            z-index: -1;
+        }
+
+        .infra-container {
+            margin-top: 3rem;
+            position: relative;
+            padding: 0 3rem;
+        }
+
+        .infra-scroll {
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            padding: 1rem 0;
+        }
+
+        .infra-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .infra-grid {
+            display: flex;
+            gap: 2rem;
+            width: max-content;
+        }
+
+        .infra-card {
+            width: calc((100vw - 8rem) / 4);
+            max-width: 300px;
+            flex-shrink: 0;
+        }
+
+        .scroll-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--color-primary);
+            color: var(--text-light);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            z-index: 5;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .scroll-arrow:hover {
+            background: var(--color-accent);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .scroll-arrow.left {
+            left: 0;
+        }
+
+        .scroll-arrow.right {
+            right: 0;
+        }
+
+        .infra-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow-accent);
+            transition: transform 0.3s;
+            border: 1px solid var(--border-accent);
+        }
+
+        .infra-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .infra-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .infra-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .infra-card:hover .infra-image img {
+            transform: scale(1.1);
+        }
+
+        .infra-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .infra-card h3 {
+            color: var(--text-highlight);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .infra-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .service-item {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                padding: 1rem;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                border-top: 1px solid var(--border-light);
+                border-bottom: 1px solid var(--border-light);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 100px 1rem 60px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .infra-card {
+                width: calc((100vw - 6rem) / 2);
+            }
+
+            .scroll-arrow {
+                width: 35px;
+                height: 35px;
+                font-size: 1.2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-map iframe {
+                height: 300px;
+            }
+        }
+
+        /* Small Phones */
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .service-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .infra-card {
+                width: calc(100vw - 5rem);
+            }
+
+            .scroll-arrow {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+
+            .contact-info {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        /* Handle very small screens */
+        @media (max-width: 320px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .infra-card {
+                width: calc(100vw - 4rem);
+            }
+        }
+
+        .machine-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .machine-card {
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--card-bg-alt) 100%);
+            color: var(--text-white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 2px solid var(--accent-gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .machine-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: 0;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(201, 164, 76, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        .machine-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+            color: var(--accent-gold);
+        }
+
+        .machine-card .status {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--primary-black);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .machine-card ul {
+            list-style: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .machine-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .machine-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        .coming-soon {
+            opacity: 0.7;
+            border-color: var(--secondary-silver);
+        }
+
+        .coming-soon .status {
+            background: var(--secondary-silver);
+            color: var(--primary-black);
+        }
+
+
+        /* Work Highlights Section */
+        .work-highlights {
+            padding: 80px 2rem;
+            background: linear-gradient(195deg, var(--dark-gray) 0%, var(--primary-black) 100%);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        /* Work Card Styles */
+        .work-card {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 1/1;
+            border: 1px solid var(--accent-gold);
+        }
+
+        .work-image {
+            width: 100%;
+            height: 100%;
+        }
+
+        .work-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+        }
+
+        .work-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: var(--overlay-light);
+            padding: 1.5rem;
+            transform: translateY(calc(100% - 65px));
+            transition: transform 0.3s ease;
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 0.5rem;
+        }
+
+        .work-card:hover .work-overlay {
+            transform: translateY(0);
+        }
+
+        .work-overlay h3 {
+            color: var(--text-highlight);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            line-height: 1.2;
+        }
+
+        .work-overlay p {
+            color: var(--text-secondary);
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .work-overlay ul {
+            color: var(--text-secondary);
+            list-style: none;
+            padding: 0;
+            margin: 0.25rem 0 0 0;
+        }
+
+        .work-overlay li {
+            margin-top: 0.25rem;
+            padding-left: 1.25rem;
+            position: relative;
+            font-size: 0.95rem;
+            line-height: 1.3;
+        }
+
+        .work-overlay li:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--color-accent);
+        }
+
+        @media (max-width: 1200px) {
+            .work-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .work-content ul {
+            list-style: none;
+        }
+
+        .work-content li {
+            color: var(--secondary-silver);
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .work-content li:before {
+            content: '✓';
+            color: var(--accent-gold);
+            position: absolute;
+            left: 0;
+        }
+
+        .view-more-link {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        .view-more-link.animate-in {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .view-more-link::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--color-primary);
+            transition: transform 0.3s ease;
+            transform-origin: right;
+            transform: scaleX(1);
+        }
+
+        .view-more-link:hover {
+            color: var(--color-accent);
+            transform: scale(1.05);
+        }
+
+        .view-more-link:hover::after {
+            background: var(--color-accent);
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            padding: 80px 2rem;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .why-choose-us::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('Assets/Background 1.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.3;
+            z-index: -1;
+            transform: translateZ(0);
+        }
+
+        .why-choose-us::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(225deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%);
+            z-index: -1;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-image {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid var(--accent-gold);
+        }
+
+        .feature-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover .feature-image img {
+            transform: scale(1.1);
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-accent);
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px var(--shadow-accent);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+
+        .feature-card h3 {
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--secondary-silver);
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 2rem;
+            background: var(--dark-gray);
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--secondary-silver);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 35px 2rem;
+            position: relative;
+            color: var(--text-light);
+            border-top: 2px solid var(--border-accent);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('Assets/Background 2.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.3;
+            z-index: -1;
+            transform: translateZ(0);
+        }
+
+        .contact::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%);
+            z-index: -1;
+        }
+
+        .contact-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            text-align: left;
+        }
+
+        .contact-map {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-accent);
+            height: 400px;
+        }
+
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .contact-text {
+            padding: 2rem 0;
+            color: var(--text-light);
+        }
+
+        .contact-text .section-title {
+            color: var(--color-primary);
+        }
+
+        .contact-text p {
+            color: var(--text-light);
+        }
+
+        .contact-info p {
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .contact-text {
+                padding: 2rem 0;
+            }
+            .contact-info {
+                text-align: left;
+                padding-left: 2rem;
+            }
+        }
+
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            color: var(--secondary-silver);
+        }
+
+        .contact-info p {
+            margin: 1rem 0;
+        }
+
+        .contact-info p a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-black);
+            color: var(--secondary-silver);
+            text-align: center;
+            padding: 2rem 2rem 0rem 2rem;
+            border-top: 1px solid var(--accent-gold);
+        }
+
+        /* Parallax Backgrounds */
+        .services::before,
+        .infrastructure::before,
+        .work-highlights::before,
+        .why-choose-us::before {
+            will-change: transform;
+            transition: transform 0.1s linear;
+            transform: translateY(var(--parallax-y, 0));
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .menu-toggle:hover {
+            background: var(--bg-secondary);
+        }
+
+        .menu-toggle.active {
+            transform: rotate(90deg);
+        }
+
+        @media (max-width: 1080px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary-black);
+                padding: 1rem;
+                border-top: 1px solid var(--accent-gold);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .services-grid,
+            .machine-showcase {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile Menu and Responsive Styles */
+        @media (max-width: 768px) {
+
+            /* Contact Section Responsive Fixes */
+            .contact-content {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 0;
+            }
+
+            .contact-map {
+                width: 100% !important;
+                height: 300px !important;
+                margin: 0 !important;
+            }
+
+            .contact-map iframe {
+                width: 100% !important;
+                height: 100% !important;
+                border-radius: 12px;
+            }
+
+            .contact-info {
+                width: 100% !important;
+                padding: 0 !important;
+                margin: 35px 0 0 0 !important;
+            }
+
+            /* Section Padding Updates */
+            .services,
+            .infrastructure,
+            .work-highlights,
+            .why-choose-us,
+            .about,
+            .contact {
+                padding: 30px 2rem !important;
+            }
+
+            footer {
+                padding: 0rem 1rem;
+            }
+
+            .infra-container {
+                margin-top: 0rem;
+
+            }
+
+            .infra-scroll {
+                padding: 0px;
+            }
+
+            .section-title {
+                margin-bottom: 2rem !important;
+            }
+
+            /* Logo changes */
+            .logo-full {
+                display: none;
+            }
+
+            .logo-short {
+                display: inline;
+            }
+
+            /* Navigation */
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(250, 250, 250, 0.98);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                padding: 1.5rem;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                flex-direction: column;
+                align-items: center;
+                gap: 1.2rem;
+                border-bottom: 1px solid var(--border-light);
+                z-index: 1000;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            /* Services section */
+            .service-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            .service-item:last-child {
+                margin-bottom: 0;
+            }
+
+            .service-content {
+                padding: 0;
+                text-align: center;
+            }
+
+            /* Infrastructure section */
+            .infra-container {
+                padding: 0;
+            }
+
+            .infra-card {
+                width: calc(91vw - 2rem);
+                max-width: none;
+            }
+
+            .scroll-arrow {
+                top: auto;
+                bottom: 0px;
+                transform: none;
+            }
+
+            .scroll-arrow:hover {
+                transform: scale(1.1);
+            }
+
+            .scroll-arrow.left {
+                left: calc(50% - 50px);
+            }
+
+            .scroll-arrow.right {
+                right: calc(50% - 50px);
+            }
+
+            .infra-scroll {
+                padding-bottom: 60px;
+            }
+
+            /* Container padding */
+            .container {
+                padding: 0;
+            }
+
+            /* Section padding */
+            section {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(250, 250, 250, 0.98);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                padding: 1.5rem;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                flex-direction: column;
+                align-items: center;
+                gap: 1.2rem;
+                border-bottom: 1px solid var(--border-light);
+                z-index: 1000;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav a {
+                font-size: 1.1rem;
+            }
+
+            /* Show short logo on mobile */
+            .logo-full {
+                display: none;
+            }
+
+            .logo-short {
+                display: inline;
+            }
+
+            .logo img {
+                height: 48px;
+            }
+
+            /* Add padding to sections only */
+            section {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .work-grid {
+                margin-top: 0px;
+            }
+
+            .features-grid {
+                margin-top: 0px;
+            }
+
+            .contact-content {
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Assets/Logo.png" alt="MMW Logo">
+                <span class="logo-full">Modern Machine Work</span>
+                <span class="logo-short">MMW</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#infrastructure">Infrastructure</a></li>
+                <li><a href="#work-highlights">Work Highlights</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Precision Machining Solutions</h1>
+                <p>At Modern Machine Work, we specialize in CNC turning and machining solutions tailored to your needs.
+                    With decades of hands-on expertise and a commitment to precision, we deliver reliable results for
+                    every order – from simple components to critical industrial parts.</p>
+                <a href="#contact" class="cta-button">Get a Quote</a>
+            </div>
+            <div class="hero-image">
+                <div class="slideshow-container">
+                    <div class="slide">
+                        <img src="Assets/slider 1.jpeg" alt="CNC Machine in Operation">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/slider 2.jpg" alt="Precision Machining Work">
+                    </div>
+                    <div class="slide">
+                        <img src="Assets/Slider 3.jpg" alt="Manufacturing Equipment">
+                    </div>
+                    <div class="slide-dots">
+                        <span class="dot" onclick="currentSlide(0)"></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title scroll-animate">Our Services</h2>
+
+            <div class="service-item scroll-animate">
+                <div class="service-image">
+                    <img src="Assets/Machining.jpeg" alt="CNC Machining Service">
+                </div>
+                <div class="service-content">
+                    <h3>CNC Machining</h3>
+                    <p>High-precision CNC machining for complex components with tight tolerances and superior finishes.
+                        Our modern equipment ensures accuracy, reliability, and repeatability for every project. From
+                        prototypes to large-scale production, we deliver consistent quality and cost-effective results
+                        tailored to your requirements.</p>
+                </div>
+            </div>
+
+            <div class="service-item scroll-animate">
+                <div class="service-image">
+                    <img src="Assets/turning.jpg" alt="Precision Turning Service">
+                </div>
+                <div class="service-content">
+                    <h3>Precision Turning</h3>
+                    <p>Expert turning operations for shafts, bushings, and cylindrical parts. We specialize in achieving
+                        exact geometries and smooth finishes for industries that demand precision. Whether it’s small
+                        custom jobs or high-volume production, our team ensures unmatched accuracy and efficiency in
+                        every part delivered.</p>
+                </div>
+            </div>
+
+            <div class="service-item scroll-animate">
+                <div class="service-image">
+                    <img src="Assets/cutting.jpg" alt="Metal Cutting Service">
+                </div>
+                <div class="service-content">
+                    <h3>Metal Cutting</h3>
+                    <p>Advanced cutting solutions for steel, aluminum, brass, and specialty alloys. Designed for minimal
+                        waste, maximum efficiency, and consistent results in every batch. Our skilled operators and
+                        modern tools guarantee clean cuts and precise dimensions, helping you save time and reduce
+                        material costs.</p>
+                </div>
+            </div>
+
+            <div class="service-item scroll-animate">
+                <div class="service-image">
+                    <img src="Assets/finishing.jpg" alt="Surface Finishing Service">
+                </div>
+                <div class="service-content">
+                    <h3>Finishing</h3>
+                    <p>Deburring, polishing, and coating solutions to enhance durability and appearance. Our finishing
+                        services give your parts a professional, ready-to-use look. From corrosion protection to
+                        aesthetic improvements, we provide finishing processes that meet industrial standards and exceed
+                        customer expectations.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="infrastructure" class="infrastructure">
+        <div class="container">
+            <h2 class="section-title scroll-animate">Infrastructure</h2>
+            <div class="infra-container">
+                <button class="scroll-arrow left" onclick="scrollInfrastructure('left')">❮</button>
+                <button class="scroll-arrow right" onclick="scrollInfrastructure('right')">❯</button>
+                <div class="infra-scroll">
+                    <div class="infra-grid">
+                        <div class="infra-card scroll-animate">
+                            <div class="infra-image">
+                                <img src="Assets/LL20TL5.png?w=800&h=600&fit=crop" alt="CNC Machine">
+                            </div>
+                            <div class="infra-content">
+                                <h3>CNC Machine</h3>
+                                <p>Modern CNC technology for precise and efficient machining. Delivers accuracy, speed,
+                                    and consistency for both prototypes and production.</p>
+                            </div>
+                        </div>
+
+                        <div class="infra-card scroll-animate">
+                            <div class="infra-image">
+                                <img src="Assets/vernier-caliper.png?w=800&h=600&fit=crop"
+                                    alt="Digital Vernier Caliper">
+                            </div>
+                            <div class="infra-content">
+                                <h3>Digital Vernier Calipers</h3>
+                                <p>High-accuracy vernier calipers for measuring internal, external, and depth
+                                    dimensions, ensuring consistent quality checks across all parts.</p>
+                            </div>
+                        </div>
+
+                        <div class="infra-card scroll-animate">
+                            <div class="infra-image">
+                                <img src="Assets/micrometer.png?w=800&h=600&fit=crop" alt="Digital Micrometer">
+                            </div>
+                            <div class="infra-content">
+                                <h3>Digital Micrometers</h3>
+                                <p>Ultra-precise micrometers capable of measuring up to 0.001 mm, guaranteeing the
+                                    highest level of dimensional accuracy for critical components.</p>
+                            </div>
+                        </div>
+
+                        <div class="infra-card scroll-animate">
+                            <div class="infra-image">
+                                <img src="Assets/dail.png?w=800&h=600&fit=crop" alt="Dial Indicator">
+                            </div>
+                            <div class="infra-content">
+                                <h3>Dial Indicators</h3>
+                                <p>Reliable dial indicators to detect dimensional variations, alignment, and
+                                    concentricity during machining and inspection processes.</p>
+                            </div>
+                        </div>
+
+                        <div class="infra-card scroll-animate">
+                            <div class="infra-image">
+                                <img src="Assets/thread.png?w=800&h=600&fit=crop" alt="Thread Gauge">
+                            </div>
+                            <div class="infra-content">
+                                <h3>Thread Gauges</h3>
+                                <p>Standard and custom thread gauges for verifying thread pitch, diameter, and accuracy,
+                                    ensuring perfect fittings and compliance with standards.</p>
+                            </div>
+                        </div>
+
+                        <div class="infra-card scroll-animate">
+                            <div class="infra-image">
+                                <img src="Assets/guages.png?w=800&h=600&fit=crop" alt="Measuring Gauges">
+                            </div>
+                            <div class="infra-content">
+                                <h3>Measuring Gauges</h3>
+                                <p>A variety of gauges for dimensional inspection and tolerance checks, ensuring every
+                                    component meets exact specifications consistently.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+    </section>
+
+
+    <section id="work-highlights" class="work-highlights">
+        <div class="container">
+            <h2 class="section-title scroll-animate">Work Highlights</h2>
+            <div class="work-grid">
+                <div class="work-card scroll-animate">
+                    <div class="work-image">
+                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=8`00&h=500&fit=crop"
+                            alt="Automotive Parts">
+                    </div>
+                    <div class="work-overlay">
+                        <h3>Automotive Parts</h3>
+                        <p>Precision-engineered components with superior quality</p>
+                        <ul>
+                            <li>Engine components</li>
+                            <li>Transmission parts</li>
+                            <li>Custom fittings</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="work-card scroll-animate">
+                    <div class="work-image">
+                        <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=800&h=500&fit=crop"
+                            alt="Industrial Parts">
+                    </div>
+                    <div class="work-overlay">
+                        <h3>Industrial Equipment</h3>
+                        <p>High-precision machining for industrial applications</p>
+                        <ul>
+                            <li>Manufacturing equipment</li>
+                            <li>Industrial machinery</li>
+                            <li>Specialized tools</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="work-card scroll-animate">
+                    <div class="work-image">
+                        <img src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?w=800&h=500&fit=crop"
+                            alt="Precision Parts">
+                    </div>
+                    <div class="work-overlay">
+                        <h3>Precision Components</h3>
+                        <p>Custom manufactured components for diverse industries</p>
+                        <ul>
+                            <li>Precision parts</li>
+                            <li>Complex assemblies</li>
+                            <li>Quality assurance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="work-card scroll-animate">
+                    <div class="work-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqF49eg2e5IcEYWLvoatN5Annz2YL1xg7Wjw&s"
+                            alt="Manufacturing Solutions">
+                    </div>
+                    <div class="work-overlay">
+                        <h3>Manufacturing</h3>
+                        <p>Advanced manufacturing solutions</p>
+                        <ul>
+                            <li>Prototype development</li>
+                            <li>Production optimization</li>
+                            <li>Quality control</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="Assets/workhighlights.html" class="view-more-link scroll-animate">View More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us" class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title scroll-animate">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Precision Excellence</h3>
+                    <p>Our commitment to precision and quality ensures your components meet exact specifications.</p>
+                </div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Quick Turnaround</h3>
+                    <p>Efficient processes and modern equipment enable fast delivery without compromising quality.</p>
+                </div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">💡</div>
+                    <h3>Expert Team</h3>
+                    <p>Skilled machinists and engineers with years of industry experience.</p>
+                </div>
+                <div class="feature-card scroll-animate">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>Advanced Technology</h3>
+                    <p>State-of-the-art CNC machines and quality control systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title scroll-animate">About</h2>
+            <div class="about-content scroll-animate">
+                <p>At Modern Machine Work, we specialize in delivering precision machining solutions that meet the
+                    exacting standards of today's industries. With our CNC technology and commitment to quality, we
+                    transform raw materials into perfectly crafted components.</p>
+                <p>Our experienced team combines technical expertise with attention to detail, ensuring every project
+                    meets specifications and exceeds expectations. Whether you need a single prototype or full
+                    production runs, we have the capability and dedication to deliver excellence.</p>
+                <p>We're continuously investing in the latest machining technology to expand our capabilities and better
+                    serve our clients' evolving needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact scroll-animate">
+        <div class="container">
+            <h2 class="section-title scroll-animate">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-map scroll-animate-left">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1553.6892672850083!2d70.78211365783442!3d22.152015100316728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395835bcb2f98773%3A0xe8972e8d06caa126!2sShapar%2C%20Gujarat%20360026!5e0!3m2!1sen!2sin!4v1760184071480!5m2!1sen!2sin"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="contact-text scroll-animate-right">
+                    <p>Ready to discuss your machining needs? Contact us today for a consultation and quote.</p>
+                    <div class="contact-info">
+                        <p>📧 Email: <a
+                                href="mailto:modernmachinework2025@gmail.com">modernmachinework2025@gmail.com</a></p>
+                        <p>📞 Phone: <a href="tel:+919023750839">+91 9023750839</a></p>
+                        <p>📍 Location: <a
+                                href="https://maps.app.goo.gl/yxtGmfw5f4o8t1AP8"
+                                target="_blank">Balaji Ind. Area, Shed No. 1, Plot-8/2, Nr Nijanand Packing, Shapar</a>
+                        </p>
+
+                    </div>
+                    <a href="mailto:info@modernmachinework.com" class="cta-button" style="margin-top: 2rem;">Request a
+                        Quote</a>
+                </div>
+            </div>
+
+            <footer>
+                <p>&copy; 2025 Modern Machine Work. All rights reserved.</p>
+            </footer>
+
+            <script>
+                // Handle active state for navigation links
+                function updateActiveNavLink() {
+                    const sections = document.querySelectorAll('section');
+                    const navLinks = document.querySelectorAll('nav a');
+
+                    let currentSectionId = '';
+
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop - 100; // Adjust for header height
+                        const sectionBottom = sectionTop + section.offsetHeight;
+
+                        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+                            currentSectionId = section.id;
+                        }
+                    });
+
+                    navLinks.forEach(link => {
+                        const href = link.getAttribute('href').substring(1); // Remove #
+                        if (href === currentSectionId) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+
+                // Add scroll event listener for active state
+                window.addEventListener('scroll', updateActiveNavLink);
+                window.addEventListener('load', updateActiveNavLink);
+
+                // Slideshow functionality with smooth right-to-left animation
+                let slideIndex = 0;
+                let slideTimer;
+                const slides = document.getElementsByClassName("slide");
+                const dots = document.getElementsByClassName("dot");
+
+                function showSlides() {
+                    // Remove prev class from all slides
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].classList.remove("active", "prev");
+                    }
+
+                    // Mark current slide as prev
+                    slides[slideIndex].classList.add("prev");
+
+                    // Update dots
+                    for (let i = 0; i < dots.length; i++) {
+                        dots[i].classList.remove("active");
+                    }
+
+                    // Move to next slide
+                    slideIndex++;
+                    if (slideIndex >= slides.length) {
+                        slideIndex = 0;
+                    }
+
+                    // Show next slide
+                    slides[slideIndex].classList.add("active");
+                    dots[slideIndex].classList.add("active");
+
+                    slideTimer = setTimeout(showSlides, 5000); // Change image every 5 seconds
+                }
+
+                function currentSlide(n) {
+                    clearTimeout(slideTimer);
+
+                    // Remove classes from all slides
+                    for (let i = 0; i < slides.length; i++) {
+                        slides[i].classList.remove("active", "prev");
+                    }
+
+                    // Mark current as prev
+                    slides[slideIndex].classList.add("prev");
+
+                    // Update to selected slide
+                    slideIndex = n;
+
+                    // Update dots
+                    for (let i = 0; i < dots.length; i++) {
+                        dots[i].classList.remove("active");
+                    }
+
+                    slides[slideIndex].classList.add("active");
+                    dots[slideIndex].classList.add("active");
+
+                    slideTimer = setTimeout(showSlides, 5000);
+                }
+
+                // Start slideshow when page loads
+                window.addEventListener('load', function () {
+                    // Initialize first slide
+                    slides[0].classList.add("active");
+                    dots[0].classList.add("active");
+                    slideTimer = setTimeout(showSlides, 5000);
+                });
+
+                function toggleMenu() {
+                    const menu = document.getElementById('navMenu');
+                    menu.classList.toggle('active');
+                }
+
+                // Smooth scrolling for navigation links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                            // Close mobile menu if open
+                            document.getElementById('navMenu').classList.remove('active');
+                        }
+                    });
+                });
+
+                // Animate elements on scroll
+                function animateOnScroll() {
+                    const elements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right, .scroll-animate-scale, section');
+
+                    elements.forEach(element => {
+                        const elementTop = element.getBoundingClientRect().top;
+                        const elementBottom = element.getBoundingClientRect().bottom;
+                        const windowHeight = window.innerHeight;
+
+                        if (elementTop < windowHeight * 0.85 && elementBottom > 0) {
+                            element.classList.add('animate-in');
+
+                            // Animate children with delay
+                            const children = element.querySelectorAll('.scroll-animate:not(.animate-in)');
+                            children.forEach((child, index) => {
+                                setTimeout(() => {
+                                    child.classList.add('animate-in');
+                                }, index * 200);
+                            });
+                        }
+                    });
+                }
+
+                // Initial check on page load
+                window.addEventListener('load', function () {
+                    animateOnScroll();
+                });
+            </script>
+            <script>
+                // Mobile Menu Toggle
+                function toggleMenu() {
+                    document.getElementById('navMenu').classList.toggle('active');
+                }
+
+                // Optimize scroll performance
+                let scrollTimeout;
+                window.addEventListener('scroll', () => {
+                    if (!scrollTimeout) {
+                        scrollTimeout = setTimeout(() => {
+                            animateOnScroll();
+                            updateActiveNavLink();
+                            scrollTimeout = null;
+                        }, 10);
+                    }
+                });
+
+                // Initialize everything on load
+                window.addEventListener('load', () => {
+                    animateOnScroll();
+                    updateActiveNavLink();
+                    updateInfraArrows();
+                });
+
+                // Handle resize events
+                let resizeTimeout;
+                window.addEventListener('resize', () => {
+                    if (!resizeTimeout) {
+                        resizeTimeout = setTimeout(() => {
+                            updateInfraArrows();
+                            resizeTimeout = null;
+                        }, 100);
+                    }
+                });
+                // Infrastructure scroll functionality
+                function scrollInfrastructure(direction) {
+                    const container = document.querySelector('.infra-scroll');
+                    const cardWidth = document.querySelector('.infra-card').offsetWidth;
+                    const scrollAmount = (cardWidth + 32) * 1; // 1 cards at a time + gap
+
+                    if (direction === 'left') {
+                        container.scrollBy({
+                            left: -scrollAmount,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        container.scrollBy({
+                            left: scrollAmount,
+                            behavior: 'smooth'
+                        });
+                    }
+
+                    // Update arrow visibility
+                    setTimeout(() => updateInfraArrows(), 300);
+                }
+
+                function updateInfraArrows() {
+                    const container = document.querySelector('.infra-scroll');
+                    const leftArrow = document.querySelector('.scroll-arrow.left');
+                    const rightArrow = document.querySelector('.scroll-arrow.right');
+
+                    leftArrow.style.opacity = container.scrollLeft <= 0 ? '0.5' : '1';
+                    rightArrow.style.opacity =
+                        Math.ceil(container.scrollLeft + container.clientWidth) >= container.scrollWidth ? '0.5' : '1';
+                }
+
+                // Initialize infrastructure scroll
+                window.addEventListener('load', function () {
+                    updateInfraArrows();
+                    window.addEventListener('resize', updateInfraArrows);
+                });
+            </script>
+</body>
+
+</html>
